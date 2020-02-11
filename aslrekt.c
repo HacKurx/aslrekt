@@ -57,8 +57,10 @@ int main(int argc, char **argv)
                         dup2(0, 2);
                         close(fd);
                         sleep(2);
+                        // need the spice-client-glib-usb-acl-helper package
                         execlp("/usr/lib/spice-gtk/spice-client-glib-usb-acl-helper", "spice-client-glib-usb-acl-helper", NULL);
                         execlp("/usr/libexec/spice-gtk-x86_64/spice-client-glib-usb-acl-helper", "spice-client-glib-usb-acl-helper", NULL);
+                        // need the procmail package
                         execlp("/usr/bin/procmail", "procmail", NULL);
                 }
 
